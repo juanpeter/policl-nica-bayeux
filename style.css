@@ -95,14 +95,23 @@ input:focus {
 	width: 100vw;
 	z-index: 2;
 }
+.fade-in {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	z-index: 3;
+	display: none;
+	opacity: 0;
+}
 .side-menu {
 	background-color: #015C8F;
 	color: #fefefe;
 	border-left: solid #F58400 18px;
 	position: fixed;
 	top: 0;
-	/* use js to change that */
-	right: 0;
+	right: -50vw;
 	z-index: 3;
 	height: 100vh;
 	width: 50vw;
@@ -110,6 +119,21 @@ input:focus {
 .side-nav {
 	border-left: solid #F5B800 18px;
 	height: 100vh;
+}
+.side-nav svg {
+	height: 80px;
+	display: flex;
+	padding: 16px;
+	margin-left: auto;
+	fill: #fefefe;
+	transform: rotate(0deg);
+	transition: 0.25s;
+}
+.side-nav svg:hover {
+	cursor: pointer;
+	fill: #F58400;
+	transform: rotate(180deg);
+	transition: 0.25s;
 }
 .side-nav ul {
 	height: 40vh;
@@ -151,6 +175,16 @@ header nav a li {
 	padding: 1rem;
 	color: #015C8F;
 }
+@media screen and (max-width: 878px) {
+	header nav a li{
+		font-size: 1rem;
+	}
+}
+@media screen and (max-width: 780px) {
+	header nav a li{
+		display: none;
+	}
+}
 header nav a {
 	height: 100%;
 }
@@ -160,6 +194,24 @@ header nav li form {
 header nav a li:hover, .side-menu li a:hover {
 	color: #F58400;
 	transition: ease-in-out 0.25s;
+}
+li#menu-button {
+	display: none;
+}
+@media screen and (max-width: 780px) {
+	li#menu-button {
+		display: block;
+		/* transform: rotate(30deg); */
+	}
+	li#menu-button svg:hover {
+		cursor: pointer;
+		fill: #F58400;
+		transition: ease-in-out 0.25s;
+	}
+}
+header nav svg {
+	fill: #015C8F;
+	height: 48px;
 }
 /* sidebar */
 .sidebar {
@@ -232,7 +284,7 @@ section#contact {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	color: #fefefe;
 	padding: 2em;
-	min-width: 500px; 
+	/* min-width: 500px;  */
 }
 section#pictures h2,
 section#exams-specialities h2,
@@ -255,26 +307,28 @@ section#exams-specialities {
 	width: 75vw;
 }
 .bottom-wrapper {
-	display: grid;
-	grid-column-gap: 18px;
-	grid-template-columns: auto auto;
+	margin: 0;
+	padding: 0;
 }
-.bottom-wrapper section {
-	width: 50vw;
+.bottom-wrapper .col-md-6:nth-child(1) {
+	padding: 0 1rem 0 0;
+}
+.bottom-wrapper .col-md-6:nth-child(2) {
+	padding: 0 0 0 1rem;
 }
 .section-wrapper {
 	max-width: 350px;
 	display: flex;
 	flex-wrap: wrap;
 }
+section#results,
+section#contact {
+	height: 480px;
+}
 section#results {
 	background-color: #F58400;
 	border: solid #F58400 2px;
 	border-bottom-right-radius: 25px;
-}
-/* Maybe delete this? */
-section#results .section-wrapper {
-	float: right;
 }
 section#results form input {
 	background-color: transparent;
@@ -305,7 +359,6 @@ section#contact {
 	background-color: #25D366;
 	border: solid #25D366 2px;
 	border-bottom-left-radius: 25px;
-	min-height: 458px;
 	align-self: flex-end;
 }
 button.white-section-button {

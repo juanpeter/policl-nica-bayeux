@@ -59,38 +59,48 @@
 			<!--/Flex wrapper-->
 			</div>
 
-			<div class="bottom-wrapper">
-				<section id="results">
-					<div class="section-wrapper">
-					<h2>Resultados Online</h2>
-						<form name="acessoPacientes" id="acessoPacientes" method="post" action="http://laudo.doremedicina.com.br/arlaudo/default.aspx">
-							<input name="PACIENTE" title="ID do paciente" id="PACIENTE" size="15" class="form" type="text" value="Id do Paciente" onfocus="if (this.value == 'Id do Paciente'){ this.value='';}" onblur="if (this.value == ''){ this.value='Id do Paciente';}">
-							<br>
-							<input name="SENHA" title="Senha" size="15" id="SENHA" class="form" type="password" value="*******" onfocus="if (this.value == '*******'){ this.value='';}" onblur="if (this.value == ''){ this.value='*******';}">
-							<br>
-							<div class="section-wrapper">
-								<input type="submit" value="ACESSAR" class="white-full-button">
-							</div>
-							<div class="section-wrapper">
-								<p>Estas informações estão em sua ficha de atendimento.</p>
-							</div>
-						</form>
-					</div>
-				</section>
-
-				<section id="contact">
-					<h2>Contato</h2>
-					<p>Entre em contato e agende sua consulta!</p>
-					<button class="white-section-button">
-						<div class="section-button-wrapper">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/icons/whatsapp.svg" alt="Whatsapp">
-								<span>Whatsapp</span>
-								<img src="<?php echo get_template_directory_uri(); ?>/img/icons/right-arrow.svg" alt="Acessar">
+			<!-- <div class="bottom-wrapper"> -->
+				<div class="container-fluid bottom-wrapper">
+					<div class="row">
+						<div class="col-md-6">
+							<section id="results">
+								<div class="section-wrapper">
+								<h2>Resultados Online</h2>
+									<form name="acessoPacientes" id="acessoPacientes" method="post" action="http://laudo.doremedicina.com.br/arlaudo/default.aspx">
+										<input name="PACIENTE" title="ID do paciente" id="PACIENTE" size="15" class="form" type="text" value="Id do Paciente" onfocus="if (this.value == 'Id do Paciente'){ this.value='';}" onblur="if (this.value == ''){ this.value='Id do Paciente';}">
+										<br>
+										<input name="SENHA" title="Senha" size="15" id="SENHA" class="form" type="password" value="*******" onfocus="if (this.value == '*******'){ this.value='';}" onblur="if (this.value == ''){ this.value='*******';}">
+										<br>
+										<div class="section-wrapper">
+											<input type="submit" value="ACESSAR" class="white-full-button">
+										</div>
+										<div class="section-wrapper">
+											<p>Estas informações estão em sua ficha de atendimento.</p>
+										</div>
+									</form>
+								</div>
+							</section>
 						</div>
-					</button>
-				</section>
+						<div class="col-md-6">
+							<section id="contact">
+								<h2>Contato</h2>
+								<p>Entre em contato e agende sua consulta!</p>
+								<button class="white-section-button">
+									<div class="section-button-wrapper">
+										<img src="<?php echo get_template_directory_uri(); ?>/img/icons/whatsapp.svg" alt="Whatsapp">
+										<span>Whatsapp</span>
+										<img src="<?php echo get_template_directory_uri(); ?>/img/icons/right-arrow.svg" alt="Acessar">
+									</div>
+								</button>
+							</section>
+						</div>
+					</div>
+				</div>
+
+
+
 			<!--/Bottom wrapper-->
-			</div>
+			<!-- </div> -->
 		</main>
 
 <?php get_footer(); ?>
