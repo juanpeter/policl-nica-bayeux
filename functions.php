@@ -25,6 +25,23 @@ if (function_exists('add_theme_support'))
     // Add Menu Support
     add_theme_support('menus');
 
+    // Add custom header background
+    add_theme_support( 'custom-background', array(
+        'wp-head-callback' => 'wpse_189361_custom_background_cb',
+        'default-color'    => '015C8F',
+        'default-image'    => get_template_directory_uri() . '/img/bg.jpg',
+    ));
+    function wpse_189361_custom_background_cb() {
+        ob_start();
+    
+        _custom_background_cb(); // Default handler
+    
+        $style = ob_get_clean();
+        $style = str_replace( 'body.custom-background', '.hero', $style );
+    
+        echo $style;
+    }
+
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
     add_image_size('large', 700, '', true); // Large Thumbnail

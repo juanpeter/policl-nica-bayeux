@@ -6,12 +6,13 @@
 		
 		const timer = 500;
 
-		// TO-DO: Needs to reset the css to it's original state
 		document.getElementById('menu-button').addEventListener('click', function() {
 			$('li#menu-button svg').css({
-				'fill': '#F58400',
 				'transform': 'rotate(90deg)',
 				'transition': (timer / 1000) + 's',
+			});
+			$('#close-menu').css({
+				'transform': 'rotate(0deg)'
 			});
 			$('.fade-in').css('display','block');
 			$('.side-menu').animate({
@@ -21,28 +22,30 @@
 				opacity: 1,
 			}, timer);
 		});
-		
+		// TO-DO if window > 590px make .side-menu right: -50vw
 		document.getElementById('close-menu').addEventListener('click', function() {
 			$('li#menu-button svg').css({
-				'fill': '#015C8F',
 				'transform': 'rotate(0deg)',
 				'transition': (timer / 1000) + 's',
 			});
 			$('#close-menu').css({
-				'transform': 'rotate(270deg)',
+				'transform': 'rotate(90deg)',
 				'transition': (timer / 1000) + 's',
 			});
-			$('.side-menu').animate({
-				right: "-50vw",
-			}, timer);
-			
+			if ($('body').width() < 590) {
+				$('.side-menu').animate({
+					right: "-300px",
+				}, timer);
+			}
+			else {
+				$('.side-menu').animate({
+					right: "-50vw",
+				}, timer);
+			}
 			$('.fade-in').animate({
 				opacity: 0,
 			}, timer);
 			$('.fade-in').css('display','none');
-			$('#close-menu').css({
-				'transform': 'rotate(0deg)'
-			});
 		});
 	});
 	

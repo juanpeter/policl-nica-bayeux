@@ -26,7 +26,7 @@
 				</section>
 
 				<section id="pictures">
-
+					<h2>Nossa Estrutura</h2>
 				</section>
 
 				<section id="exams-specialities">
