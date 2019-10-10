@@ -22,7 +22,29 @@
 				opacity: 1,
 			}, timer);
 		});
-		// TO-DO if window > 590px make .side-menu right: -50vw
+		// If window size is reajusted, hide the side-menu
+		window.addEventListener('resize', function() {
+			// If the body size is more than 590px, hide menu to '50vw'
+			if ($('body').width() > 590) {
+				$('li#menu-button svg').css({
+					'transform': 'rotate(0deg)',
+					'transition': (timer / 1000) + 's',
+				});
+				$('.side-menu').css('right', "-50vw");
+				$('.fade-in').css('opacity:', 0);
+				$('.fade-in').css('display','none');
+			}
+			// If the body size is less than 590px, hide menu to '50vw'
+			else {
+				$('li#menu-button svg').css({
+					'transform': 'rotate(0deg)',
+					'transition': (timer / 1000) + 's',
+				});
+				$('.side-menu').css('right', "-300px");
+				$('.fade-in').css('opacity:', 0);
+				$('.fade-in').css('display','none');
+			}
+		});
 		document.getElementById('close-menu').addEventListener('click', function() {
 			$('li#menu-button svg').css({
 				'transform': 'rotate(0deg)',

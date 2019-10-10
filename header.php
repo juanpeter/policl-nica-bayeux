@@ -32,34 +32,43 @@
 			<!-- header -->
 			<header class="header clear" role="banner">
 
+			<nav class="navbar fixed-top"  role="navigation">
 					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/policlinicaBayeux.png" alt="Logo" class="logo-img">
-						</a>
-					</div>
+					<a class='navbar-brand logo' href="<?php echo home_url(); ?>">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/policlinicaBayeux.png" alt="Logo" class="logo-img">
+					</a>
 					<!-- /logo -->
 
 					<!-- nav -->
-					<nav role="navigation">
+					
 						<?php /*html5blank_nav();*/ ?>
-						<ul>
-							<a href="#">
-								<li>Home</li>
-							</a>
-							<a href="#description">
-								<li>Quem Somos</li>
-							</a>
-							<a href="#pictures">
-								<li>Estrutura</li>
-							</a>
-							<a href="#exams-specialities">
-								<li>Exames</li>
-							</a>
-							<a href="#results">
-								<li>Resultados</li>
-							</a>
+						<!-- TO-DO: see if navbar will work for the side-nav too -->
+						<ul class='navbar-nav ml-auto' id='navbar-header'>
+							<li class='nav-item'>
+								<a class="nav-link" href="#hero">
+									<span>Home</span>
+								</a>
+							</li>
+							<li class='nav-item'>
+								<a class="nav-link" href="#description">
+									<span>Quem Somos</span>
+								</a>
+							</li>
+							<li class='nav-item'>
+								<a class="nav-link" href="#pictures">
+									<span>Estrutura</span>
+								</a>
+							</li>
+							<li class='nav-item'>
+								<a class="nav-link" href="#exams-specialities">
+									<span>Exames</span>
+								</a>
+							</li>
+							<li class='nav-item'>
+								<a class="nav-link" href="#results">
+									<span>Resultados</span>
+								</a>
+							</li>
 							<li id="menu-button">
 								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
 									<g>
@@ -71,13 +80,14 @@
 									</g>
 								</svg>
 							</li>
+						</ul>
 							<!-- <li>
 								<?php //get_sidebar(); ?>
 							</li> -->
 						</ul>
 
-					</nav>
-					<!-- /nav -->
+				</nav>
+				<!-- /nav -->
 
 			</header>
 			<!-- /header -->
