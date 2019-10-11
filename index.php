@@ -10,26 +10,38 @@
 			
 				<section id="description">
 
-					<!-- article -->
-					<article id="post-<?php the_ID(431); ?>" <?php post_class(); ?>>
-						<!-- post title -->
+					<article>
+						<?php
+							$my_postid = 431;//This is page id or post id
+							$content_post = get_post($my_postid);
+							$content = $content_post->post_content;
+							$content = apply_filters('the_content', $content);
+							$content = str_replace(']]>', ']]&gt;', $content);
+						?>
 						<h1 id="slogan">
-							<?php the_title(); ?>
+							<?php echo get_the_title($my_postid); ?>
 						</h1>
-						<!-- /post title -->
-
-						<p>
-							<?php the_post(); the_content(); ?>
-						<p>
+							<?php echo $content; ?>
 					</article>
-					<!-- /article -->
 				</section>
 
 				<section id="pictures">
+					<article>
 					<div class="section-wrapper">
-						<h2>Nossa Estrutura</h2>
-						
-					</div>
+
+						<?php
+							$my_postid = 466;//This is page id or post id
+							$content_post = get_post($my_postid);
+							$content = $content_post->post_content;
+							$content = apply_filters('the_content', $content);
+							$content = str_replace(']]>', ']]&gt;', $content);
+						?>
+							<h2 id="slogan">
+								<?php echo get_the_title($my_postid); ?>
+							</h2>
+								<?php echo $content; ?>
+						</div>
+					</article>
 				</section>
 
 				<section id="exams-specialities">
