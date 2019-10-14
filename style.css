@@ -165,23 +165,21 @@ header nav {
 	flex-direction: row;
 }
 header nav li {
-	padding: 1rem;
+	padding: 0 1rem;
 }
-header nav li a span {
+header nav li span {
 	font-size: 1.25rem;
 	font-weight: bold;
 }
-header nav li a{
+header nav li span{
 	color: #015C8F;
 }
 
 header nav a {
 	height: 100%;
 }
-/* header nav li form {
-	display: inline;
-} */
-header nav li a:hover, .side-menu li a:hover {
+header nav li span:hover, .side-menu li a:hover {
+	cursor: pointer;
 	color: #F58400;
 	transition: ease-in-out 0.25s;
 }
@@ -206,17 +204,17 @@ header nav svg {
 	header nav li {
 		padding: 0.25rem;
 	}
-	header nav li a span{
+	header nav li span{
 		font-size: 0.95rem;
 	}
 }
 @media screen and (max-width: 656px) {
-	header nav li a span{
+	header nav li span{
 		font-size: 0.9rem;
 	}
 }
 @media screen and (max-width: 526px) {
-	header nav li a span{
+	header nav li span{
 		font-size: 0.65rem;
 	}
 }

@@ -45,29 +45,29 @@
 						<!-- TO-DO: see if navbar will work for the side-nav too -->
 						<ul class='navbar-nav ml-auto' id='navbar-header'>
 							<li class='nav-item'>
-								<a class="nav-link" href="#hero">
-									<span>Home</span>
-								</a>
+								<span class="nav-link">
+									Home
+								</span>
 							</li>
 							<li class='nav-item'>
-								<a class="nav-link" href="#description">
-									<span>Quem Somos</span>
-								</a>
+								<span class="nav-link">
+									Quem Somos
+								</span>
 							</li>
 							<li class='nav-item'>
-								<a class="nav-link" href="#pictures">
-									<span>Estrutura</span>
-								</a>
+								<span class="nav-link">
+									Estrutura
+								</span>
 							</li>
 							<li class='nav-item'>
-								<a class="nav-link" href="#exams-specialities">
-									<span>Exames</span>
-								</a>
+								<span class="nav-link">
+									Exames
+								</span>
 							</li>
 							<li class='nav-item'>
-								<a class="nav-link" href="#results">
-									<span>Resultados</span>
-								</a>
+								<span class="nav-link">
+									Resultados
+								</span>
 							</li>
 							<li id="menu-button">
 								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">

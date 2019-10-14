@@ -1,9 +1,32 @@
 (function ($, root, undefined) {
-	
+	// TO-DO http://iamdustan.com/smoothscroll/ Use this for smooth scrolling
 	$(function () {
 		
 		'use strict';
-		
+		// Scroll navigation
+		const navLinks = document.getElementsByClassName('nav-link');
+		for (let i = 0; i < navLinks.length; i++) {
+			navLinks[i].addEventListener('click', () => {
+				switch(i) {
+					case 0:
+						document.querySelector('#hero').scrollIntoView({behavior: 'smooth'});
+						break;
+					case 1:
+						document.querySelector('#description').scrollIntoView({behavior: 'smooth'});
+						break;
+					case 2:
+						document.querySelector('#pictures').scrollIntoView({behavior: 'smooth'});
+						break;
+					case 3:
+						document.querySelector('#exams-specialities').scrollIntoView({behavior: 'smooth'});
+						break;
+					case 4:
+						document.querySelector('#contact').scrollIntoView({behavior: 'smooth'});
+						break;
+				};
+			});
+		};
+
 		const timer = 500;
 
 		document.getElementById('menu-button').addEventListener('click', function() {
@@ -70,5 +93,6 @@
 			$('.fade-in').css('display','none');
 		});
 	});
-	
+
+
 })(jQuery, this);
