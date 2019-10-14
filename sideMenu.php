@@ -8,11 +8,11 @@
 
             <?php /*html5blank_nav();*/ ?>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Quem Somos</a></li>
-                <li><a href="#">Estrutura</a></li>
-                <li><a href="#">Exames</a></li>
-                <li><a href="#">Resultados</a></li>
+                <li><span class='nav-link'>Home</span></li>
+                <li><span class='nav-link'>Quem Somos</span></li>
+                <li><span class='nav-link'>Estrutura</span></li>
+                <li><span class='nav-link'>Exames</span></li>
+                <li><span class='nav-link'>Resultados</span></li>
                 <!-- <li>
                     <?php //get_sidebar(); ?>
                 </li> -->

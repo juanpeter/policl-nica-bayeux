@@ -40,7 +40,6 @@
 					<!-- /logo -->
 
 					<!-- nav -->
-					
 						<?php /*html5blank_nav();*/ ?>
 						<!-- TO-DO: see if navbar will work for the side-nav too -->
 						<ul class='navbar-nav ml-auto' id='navbar-header'>

@@ -21,11 +21,29 @@
 						document.querySelector('#exams-specialities').scrollIntoView({behavior: 'smooth'});
 						break;
 					case 4:
-						document.querySelector('#contact').scrollIntoView({behavior: 'smooth'});
+						document.querySelector('#results').scrollIntoView({behavior: 'smooth'});
+						break;
+					case 5:
+						document.querySelector('#hero').scrollIntoView({behavior: 'smooth'});
+						break;
+					case 6:
+						document.querySelector('#description').scrollIntoView({behavior: 'smooth'});
+						break;
+					case 7:
+						document.querySelector('#pictures').scrollIntoView({behavior: 'smooth'});
+						break;
+					case 8:
+						document.querySelector('#exams-specialities').scrollIntoView({behavior: 'smooth'});
+						break;
+					case 9:
+						document.querySelector('#results').scrollIntoView({behavior: 'smooth'});
 						break;
 				};
 			});
 		};
+		document.getElementById('button-white').addEventListener('click', () => {
+			document.querySelector('#description').scrollIntoView({behavior: 'smooth'});
+		});
 
 		const timer = 500;
 
