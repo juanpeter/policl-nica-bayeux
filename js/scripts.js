@@ -3,6 +3,12 @@
 	$(function () {
 		
 		'use strict';
+
+		// Init AOS scroll
+		AOS.init({
+			duration: 1200,
+		});
+
 		// Scroll navigation
 		const navLinks = document.getElementsByClassName('nav-link');
 		for (let i = 0; i < navLinks.length; i++) {
@@ -12,38 +18,68 @@
 						document.querySelector('#hero').scrollIntoView({behavior: 'smooth'});
 						break;
 					case 1:
-						document.querySelector('#description').scrollIntoView({behavior: 'smooth'});
+						document.querySelector('#description-section').scrollIntoView({behavior: 'smooth'});
 						break;
 					case 2:
-						document.querySelector('#pictures').scrollIntoView({behavior: 'smooth'});
+						document.querySelector('#pictures-section').scrollIntoView({behavior: 'smooth'});
 						break;
 					case 3:
-						document.querySelector('#exams-specialities').scrollIntoView({behavior: 'smooth'});
+						document.querySelector('#exams-specialities-section').scrollIntoView({behavior: 'smooth'});
 						break;
 					case 4:
-						document.querySelector('#results').scrollIntoView({behavior: 'smooth'});
+						document.querySelector('#results-section').scrollIntoView({behavior: 'smooth'});
 						break;
 					case 5:
 						document.querySelector('#hero').scrollIntoView({behavior: 'smooth'});
+						closeMenu();
 						break;
 					case 6:
-						document.querySelector('#description').scrollIntoView({behavior: 'smooth'});
+						document.querySelector('#description-section').scrollIntoView({behavior: 'smooth'});
+						closeMenu();
 						break;
 					case 7:
-						document.querySelector('#pictures').scrollIntoView({behavior: 'smooth'});
+						document.querySelector('#pictures-section').scrollIntoView({behavior: 'smooth'});
+						closeMenu();
 						break;
 					case 8:
-						document.querySelector('#exams-specialities').scrollIntoView({behavior: 'smooth'});
+						document.querySelector('#exams-specialities-section').scrollIntoView({behavior: 'smooth'});
+						closeMenu();
 						break;
 					case 9:
-						document.querySelector('#results').scrollIntoView({behavior: 'smooth'});
+						document.querySelector('#results-section').scrollIntoView({behavior: 'smooth'});
+						closeMenu();
 						break;
 				};
 			});
 		};
+		// repeated, better refactor
+		function closeMenu() {
+			$('li#menu-button svg').css({
+				'transform': 'rotate(0deg)',
+				'transition': (timer / 1000) + 's',
+			});
+			$('#close-menu').css({
+				'transform': 'rotate(90deg)',
+				'transition': (timer / 1000) + 's',
+			});
+			if ($('body').width() < 590) {
+				$('.side-menu').animate({
+					right: "-300px",
+				}, timer);
+			}
+			else {
+				$('.side-menu').animate({
+					right: "-50vw",
+				}, timer);
+			}
+			$('.fade-in').animate({
+				opacity: 0,
+			}, timer);
+			$('.fade-in').css('display','none');
+		}
 		// Main button scroll
 		document.getElementById('button-white').addEventListener('click', () => {
-			document.querySelector('#description').scrollIntoView({behavior: 'smooth'});
+			document.querySelector('#description-section').scrollIntoView({behavior: 'smooth'});
 		});
 
 		const timer = 500;
@@ -51,20 +87,22 @@
 
 		// Contact pop-up
 		document.getElementById('contact-header').addEventListener('click', () => {
-			i++
+			i++;
 			i % 2 == 0
-			? $('#contact').animate({ bottom: '0', }, timer)
-			: $('#contact').animate({ bottom: '145px',}, timer)
-			// ? () => {
-			// 	$('#contact').animate({ bottom: '0', }, timer);
-			// }
-			// : () => {
-			// 	$('#contact').animate({ bottom: '145px',}, timer);
-			// 	$('.contact-header svg').css({
-			// 		'transform': 'rotate(180deg)',
-			// 		'transition': (timer / 1000) + 's',
-			// 	}, timer);
-			// }
+			? (
+				$('#contact').animate({ bottom: '0'}, timer),
+				$('.contact-header svg').css({
+					'transform': 'rotate(0deg)',
+					'transition': (timer / 1000) + 's',
+				}, timer)
+			)
+			: (
+				$('#contact').animate({ bottom: '145px'}, timer),
+				$('.contact-header svg').css({
+					'transform': 'rotate(180deg)',
+					'transition': (timer / 1000) + 's',
+				}, timer)
+			)
 		});
 
 		document.getElementById('menu-button').addEventListener('click', () => {
@@ -90,6 +128,7 @@
 				$('li#menu-button svg').css({
 					'transform': 'rotate(0deg)',
 					'transition': (timer / 1000) + 's',
+					'fill': '#015C8F'
 				});
 				$('.side-menu').css('right', "-50vw");
 				$('.fade-in').css('opacity:', 0);
@@ -100,12 +139,14 @@
 				$('li#menu-button svg').css({
 					'transform': 'rotate(0deg)',
 					'transition': (timer / 1000) + 's',
+					'fill': '#015C8F'
 				});
 				$('.side-menu').css('right', "-300px");
 				$('.fade-in').css('opacity:', 0);
 				$('.fade-in').css('display','none');
 			}
 		});
+
 		document.getElementById('close-menu').addEventListener('click', () => {
 			$('li#menu-button svg').css({
 				'transform': 'rotate(0deg)',

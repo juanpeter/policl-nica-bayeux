@@ -6,8 +6,7 @@
 	<!-- wrapper -->
 		<aside id="contact">
 			<div class='contact-header' id='contact-header'>
-				<span>
-					Contato
+				<span>Contato
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  x="0px" y="0px" viewBox="0 0 451.847 451.846" style="enable-background:new 0 0 451.847 451.846;" xml:space="preserve"><g>
 							<path id='arrow' d="M248.292,106.406l194.281,194.29c12.365,12.359,12.365,32.391,0,44.744c-12.354,12.354-32.391,12.354-44.744,0
 							L225.923,173.529L54.018,345.44c-12.36,12.354-32.395,12.354-44.748,0c-12.359-12.354-12.359-32.391,0-44.75L203.554,106.4
@@ -15,7 +14,6 @@
 						</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
 					</svg>
 				</span>
-
 			</div>
 			<div class='contact-body'>
 				<p>Entre em contato e agende sua consulta!</p>
@@ -40,24 +38,28 @@
 		<main data-spy="scroll" data-target="#navbar-header" data-offset="0" role="main">
 
 			<div class="flex-wrapper">
-			
-				<section id="description">
-					<article>
-						<?php
-							$my_postid = 431;//This is page id or post id
-							$content_post = get_post($my_postid);
-							$content = $content_post->post_content;
-							$content = apply_filters('the_content', $content);
-							$content = str_replace(']]>', ']]&gt;', $content);
-						?>
-						<h1 id="slogan">
-							<?php echo get_the_title($my_postid); ?>
-						</h1>
-							<?php echo $content; ?>
-					</article>
-				</section>
 
-				<section id="pictures">
+			<div id='description-section'></div>
+
+			<section id="description" data-aos="fade-down">
+				<article>
+					<?php
+						$my_postid = 431;//This is page id or post id
+						$content_post = get_post($my_postid);
+						$content = $content_post->post_content;
+						$content = apply_filters('the_content', $content);
+						$content = str_replace(']]>', ']]&gt;', $content);
+					?>
+					<h1 id="slogan">
+						<?php echo get_the_title($my_postid); ?>
+					</h1>
+						<?php echo $content; ?>
+				</article>
+			</section>
+
+				<div id='pictures-section'></div>
+
+				<section id="pictures" data-aos="fade-right" >
 					<article>
 					<div class="section-wrapper">
 
@@ -76,7 +78,9 @@
 					</article>
 				</section>
 
-				<section id="exams-specialities">
+				<div id='exams-specialities-section'></div>
+
+				<section id="exams-specialities" data-aos="fade-left">
 					<div class="section-wrapper">
 						<h2>Especialidades e Exames</h2>
 						<p>Conheça todas as maneiras que podemos cuidar de sua saúde!</p>
@@ -120,48 +124,26 @@
 			<!--/Flex wrapper-->
 			</div>
 
-			<!-- <div class="bottom-wrapper"> -->
-				<div class="container-fluid bottom-wrapper">
-					<div class="row">
-						<div class="col-md-6">
-							<section id="results">
-								<div class="section-wrapper">
-								<h2>Resultados Online</h2>
-									<form name="acessoPacientes" id="acessoPacientes" method="post" action="http://laudo.doremedicina.com.br/arlaudo/default.aspx">
-										<input name="PACIENTE" title="ID do paciente" id="PACIENTE" size="15" class="form" type="text" value="Id do Paciente" onfocus="if (this.value == 'Id do Paciente'){ this.value='';}" onblur="if (this.value == ''){ this.value='Id do Paciente';}">
-										<br>
-										<input name="SENHA" title="Senha" size="15" id="SENHA" class="form" type="password" value="*******" onfocus="if (this.value == '*******'){ this.value='';}" onblur="if (this.value == ''){ this.value='*******';}">
-										<br>
-										<div class="section-wrapper">
-											<input type="submit" value="ACESSAR" class="white-full-button">
-										</div>
-										<div class="section-wrapper">
-											<p>Estas informações estão em sua ficha de atendimento.</p>
-										</div>
-									</form>
-								</div>
-							</section>
+			<div id='results-section'></div>
+
+			<section id="results" data-aos="fade-right">
+				<div class="section-wrapper">
+				<h2>Resultados Online</h2>
+					<form name="acessoPacientes" id="acessoPacientes" method="post" action="http://laudo.doremedicina.com.br/arlaudo/default.aspx">
+						<input name="PACIENTE" title="ID do paciente" id="PACIENTE" size="15" class="form" type="text" value="Id do Paciente" onfocus="if (this.value == 'Id do Paciente'){ this.value='';}" onblur="if (this.value == ''){ this.value='Id do Paciente';}">
+						<br>
+						<input name="SENHA" title="Senha" size="15" id="SENHA" class="form" type="password" value="*******" onfocus="if (this.value == '*******'){ this.value='';}" onblur="if (this.value == ''){ this.value='*******';}">
+						<br>
+						<div class="section-wrapper">
+							<input type="submit" value="ACESSAR" class="white-full-button">
 						</div>
-						<!-- <div class="col-md-6">
-							<section id="contact">
-								<h2>Contato</h2>
-								<p>Entre em contato e agende sua consulta!</p>
-								<button class="white-section-button">
-									<div class="section-button-wrapper">
-										<img src="<?php echo get_template_directory_uri(); ?>/img/icons/whatsapp.svg" alt="Whatsapp">
-										<span>Whatsapp</span>
-										<img src="<?php echo get_template_directory_uri(); ?>/img/icons/right-arrow.svg" alt="Acessar">
-									</div>
-								</button>
-							</section>
-						</div> -->
-					</div>
+					</form>
 				</div>
+				<div class="section-wrapper">
+					<p>Estas informações estão em sua ficha de atendimento.</p>
+				</div>
+			</section>
 
-
-
-			<!--/Bottom wrapper-->
-			<!-- </div> -->
 		</main>
 
 <?php get_footer(); ?>

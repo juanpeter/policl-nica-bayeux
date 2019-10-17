@@ -5,7 +5,7 @@
 	Version: 1.4.3
 	Author: Todd Motto (@toddmotto)
 	Author URI: http://toddmotto.com
-	Tags: Blank, HTML5, CSS3
+	Tags: Blank, HTML5, CSS3vf
 
 	License: MIT
 	License URI: http://opensource.org/licenses/mit-license.php
@@ -30,6 +30,7 @@ html {
 	/* font-size:62.5%; */
 	font-size: 18px;
 	overflow-x: hidden;
+	-moz-box-sizing:border-box;
 	box-sizing: border-box;
 }
 body {
@@ -220,12 +221,12 @@ header nav svg {
 		font-size: 0.65rem;
 	}
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 465px) {
 	header nav li {
 		display: none;
 	}
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 465px) {
 	li#menu-button {
 		display: block;
 	}
@@ -306,7 +307,7 @@ aside#contact svg .Instagram {
 	fill: #F58400;
 }
 aside#contact svg .Instagram:hover {
-	fill: #F58400;
+	fill: #dc7600;
 }
 aside .contact-header {
 	color: #fefefe;
@@ -359,9 +360,9 @@ aside#contact .contact-body {
 	flex-wrap: wrap;
 	flex-direction: column;
 }
-.section-wrapper {
-	text-align: center;
-}
+/* .section-wrapper {
+	width: 40%;
+} */
 section#description {
 	display: flex;
 	flex-wrap: wrap;
@@ -379,28 +380,22 @@ section#description #slogan {
 }
 section#pictures,
 section#exams-specialities,
-section#results,
-section#contact {
-	min-height: 400px;
-	margin: 1em 0;
+section#results {
+	width: 50vw;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	color: #fefefe;
 	padding: 2em;
 }
 section#pictures h2,
 section#exams-specialities h2,
-section#results h2,
-section#contact h2{
+section#results h2 {
 	font-weight: 700;
 	margin-bottom: 1.5rem;
 }
-section#pictures,
-section#exams-specialities {
-	width: 75vw;
-}
 @media screen and (max-width: 767px) {
 	section#pictures,
-	section#exams-specialities {
+	section#exams-specialities,
+	section#results {
 		width: 100vw;
 	}
 }
@@ -410,15 +405,20 @@ section#pictures {
 	border-top-right-radius: 25px;
 	align-self: flex-start;
 	display: flex;
+	justify-content: flex-end;
+}
+.section-wrapper {
+	max-width: 500px;
 	justify-content: center;
 }
-section#pictures .section-wrapper {
-	width: 500px;
-	justify-content: center;
+@media screen and (max-width: 1140px) {
+	section#pictures {
+		display: block;
+	}
 }
 @media screen and (max-width: 550px) {
 	section#pictures .section-wrapper {
-		width: 300px;
+		max-width: 300px;
 	}
 }
 section#exams-specialities {
@@ -427,45 +427,14 @@ section#exams-specialities {
 	border-bottom-left-radius: 25px;
 	align-self: flex-end;
 }
-section#description,
-section#pictures,
-section#exams-specialities,
-section#results,
-section#contact {
-	padding-top: 60px;
-}
-.bottom-wrapper {
-	margin: 0;
-	padding: 0;
-}
-.bottom-wrapper .row{
-	margin: 0;
-	padding: 0;
-}
-.bottom-wrapper .col-md-6:nth-child(1) {
-	padding: 0 1rem 0 0;
-}
-@media screen and (max-width: 767px) {
-	.bottom-wrapper .col-md-6:nth-child(1) {
-		padding: 0;
-	}
-}
-.bottom-wrapper .col-md-6:nth-child(2) {
-	padding: 0 0 0 1rem;
-}
-@media screen and (max-width: 767px) {
-	.bottom-wrapper .col-md-6:nth-child(2) {
-		padding: 0;
-	}
-}
-section#results,
-section#contact {
-	height: 480px;
-}
 section#results {
 	background-color: #F58400;
 	border: solid #F58400 2px;
 	border-bottom-right-radius: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	margin-bottom: 2rem;
 }
 section#results form input {
 	background-color: transparent;
@@ -491,12 +460,6 @@ section#results form input.white-full-button:hover {
 	border-color: #f0f0f0;
 	transform: scale(1.05);
 	transition: 0.25s ease-in-out;
-}
-section#contact {
-	background-color: #25D366;
-	border: solid #25D366 2px;
-	border-bottom-left-radius: 25px;
-	align-self: flex-end;
 }
 button.white-section-button {
 	display: block;
@@ -543,7 +506,7 @@ button.white-section-button:nth-of-type(4) img {
 button .section-button-wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	min-width: 380px;
 }
@@ -557,41 +520,45 @@ button .section-button-wrapper {
 		min-width: 280px;
 	}
 }
+#description-section,
+#pictures-section,
+#exams-specialities-section,
+#results-section {
+	height: 60px;
+}
 /* footer */
 .footer {
 	background-color: #015C8F;
-	border-top: #F5B800 18px solid;
+	border-top: #F5B800 1rem solid;
 	color: #fefefe;
 }
-.footer hr {
-	border-color: #fefefe;
-	border-width: 2px;
+.border-orange {
+	border-top: solid #F58400 0.5rem;
+}
+.footer p {
+	font-weight: 100;
 }
 .footer a {
 	color: #F5B800;
+	font-weight: 400;
 }
 .footer a:hover {
 	color: #F58400;
 	transition: ease-in-out 0.25s;
 }
+.footer .logo-img {
+	margin: 0.5rem 0;
+}
 #Gmap {
 	width: 100vw;
 	height: 120px;
 }
-footer .nav {
-	display: block;
-}
-footer .nav ul{
-	padding-left: 0;
-}
-.footer nav li {
-	list-style: none;
-}
 .footer #footer-footer {
 	background-color: #024165;
+	padding: 0.5rem;
 }
 .footer #footer-footer p {
-	text-align: center;
+	font-size: 0.75rem;
 	margin: 0;
 }
 /*------------------------------------*\
