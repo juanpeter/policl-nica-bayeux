@@ -1,7 +1,7 @@
 
 			<!-- footer -->
 			<div class="border-orange"></div>
-			<footer class="footer py-5" role="contentinfo">
+			<footer class="footer pb-5" role="contentinfo">
 				<div class="container-fluid">
 					<div class="row justify-content-center">
 						<a href="<?php echo home_url(); ?>">
@@ -18,6 +18,12 @@
 							<h2>Policlínica Bayeux</h2>
 							<p>Av. Liberdade, 2737 - Sesi Bayeux - PB 58306-000</p>
 							<p>Telefone: <a href="tel:+558332320636">(83) 3232-0636</a></p>
+							<svg id='footer-arrow' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  x="0px" y="0px" viewBox="0 0 451.847 451.846" style="enable-background:new 0 0 451.847 451.846;" xml:space="preserve"><g>
+									<path id='arrow' d="M248.292,106.406l194.281,194.29c12.365,12.359,12.365,32.391,0,44.744c-12.354,12.354-32.391,12.354-44.744,0
+									L225.923,173.529L54.018,345.44c-12.36,12.354-32.395,12.354-44.748,0c-12.359-12.354-12.359-32.391,0-44.75L203.554,106.4
+									c6.18-6.174,14.271-9.259,22.369-9.259C234.018,97.141,242.115,100.232,248.292,106.406z"/>
+								</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+							</svg>
 						</div>
 					</div>
 				</div>

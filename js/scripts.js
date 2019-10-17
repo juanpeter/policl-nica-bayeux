@@ -172,6 +172,10 @@
 			$('.fade-in').css('display','none');
 		});
 
+		document.getElementById('footer-arrow').addEventListener('click', () => {
+			document.querySelector('#hero').scrollIntoView({behavior: 'smooth'});
+		});
+
 	});
 
 })(jQuery, this);

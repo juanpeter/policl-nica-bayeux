@@ -382,7 +382,7 @@ section#pictures,
 section#exams-specialities,
 section#results {
 	width: 50vw;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
 	color: #fefefe;
 	padding: 2em;
 }
@@ -548,6 +548,20 @@ button .section-button-wrapper {
 }
 .footer .logo-img {
 	margin: 0.5rem 0;
+}
+.footer svg#footer-arrow {
+	fill: #fefefe;
+	height: 48px;
+	border: 2px solid #fefefe;
+	padding: 8px;
+	margin: 8px;
+}
+.footer svg#footer-arrow:hover {
+	cursor: pointer;
+	background-color: #fefefe;
+	/* padding-bottom: 50px; */
+	fill: #015C8F;
+	transition: 0.5s;
 }
 #Gmap {
 	width: 100vw;
