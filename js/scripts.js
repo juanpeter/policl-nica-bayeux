@@ -3,6 +3,29 @@
 	$(function () {
 		
 		'use strict';
+		//global timer for animations, change value here
+		const timer = 500;
+
+		//Loading animation
+		// Wait for window load
+		$(window).load(function() {
+			//Animation when done loading
+			$(".loader").animate({
+				'height': '450px',
+				'width': '450px',
+				'border-width': '36px',
+				'opacity': 0
+			}, timer);
+			$(".se-pre-con img").animate({
+				'height': '270',
+				'width': '450',
+				'opacity': 0
+			}, timer, () => {
+				// Animate loader off screen
+				$(".se-pre-con").fadeOut("slow");
+			});
+
+		});
 
 		// Init AOS scroll
 		AOS.init({
@@ -82,7 +105,6 @@
 			document.querySelector('#description-section').scrollIntoView({behavior: 'smooth'});
 		});
 
-		const timer = 500;
 		let i = 0;
 
 		// Contact pop-up
