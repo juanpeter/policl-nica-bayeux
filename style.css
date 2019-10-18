@@ -19,7 +19,6 @@
 *,
 *:after,
 *:before {
-	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	-webkit-font-smoothing:antialiased;
 	font-smoothing:antialiased;
@@ -30,7 +29,6 @@ html {
 	/* font-size:62.5%; */
 	font-size: 18px;
 	overflow-x: hidden;
-	-moz-box-sizing:border-box;
 	box-sizing: border-box;
 }
 body {
@@ -117,27 +115,39 @@ input:focus {
 }
 .side-nav svg {
 	height: 80px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding: 16px;
 	margin-left: auto;
 	fill: #fefefe;
+	-webkit-transition:0.25s;
 	transition: 0.25s;
 }
 .side-nav svg:hover {
 	cursor: pointer;
 	fill: #F58400;
+	-webkit-transition:0.25s;
 	transition: 0.25s;
 }
 .side-nav ul {
 	min-height: 40vh;
 	padding: 0;
 	margin: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	list-style-type: none;
-	justify-content: space-around;
-	align-content: center;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-ms-flex-line-pack: center;
+	    align-content: center;
 	font-size: 36px;
 }
 .side-menu span {
@@ -150,10 +160,18 @@ input:focus {
 /* nav */
 header nav {
 	background-color: #fefefe;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-items: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 100vw;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -166,7 +184,10 @@ header nav {
 .navbar-nav {
 	margin: 0;
 	list-style-type: none;
-	flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
 }
 header nav li {
 	padding: 0 1rem;
@@ -185,6 +206,7 @@ header nav a {
 header nav li span:hover, .side-menu li span:hover {
 	cursor: pointer;
 	color: #F58400;
+	-webkit-transition:ease-in-out 0.25s;
 	transition: ease-in-out 0.25s;
 }
 li#menu-button {
@@ -233,6 +255,7 @@ header nav svg {
 	li#menu-button svg:hover {
 		cursor: pointer;
 		fill: #F58400;
+		-webkit-transition:ease-in-out 0.25s;
 		transition: ease-in-out 0.25s;
 	}
 }
@@ -242,19 +265,30 @@ header nav svg {
 }
 /* hero */
 .hero {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	align-content: center;
-	justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-line-pack: center;
+	    align-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	height: 98vh;
 	color: #fefefe;
 	border-bottom: #F5B800 solid 18px;
 }
 .hero .hero-text {
 	width: 600px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	z-index: 2;
 }
 .hero h2 {
@@ -293,14 +327,17 @@ aside#contact svg #WhatsApp {
 }
 aside#contact svg #WhatsApp:hover {
 	fill: #21bd5b;
+	-webkit-transition:0.25s;
 	transition: 0.25s;
 }
 aside#contact svg #Facebook {
 	fill: #015C8F;
+	-webkit-transition:0.25s;
 	transition: 0.25s;
 }
 aside#contact svg #Facebook:hover {
 	fill: #024165;
+	-webkit-transition:0.25s;
 	transition: 0.25s;
 }
 aside#contact svg .Instagram {
@@ -320,6 +357,7 @@ aside .contact-header {
 aside#contact .contact-header:hover {
 	background-color: #21bd5b;
 	cursor: pointer;
+	-webkit-transition:0.25s;
 	transition: 0.25s;
 }
 aside#contact .contact-header svg {
@@ -351,24 +389,41 @@ aside#contact .contact-body {
 #button-white:hover {
 	color: #015C8F;
 	background-color: #fefefe;
-	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	        transform: scale(1.05);
+	-webkit-transition:ease-in-out 0.25s;
 	transition:  ease-in-out 0.25s;
 }
 .flex-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 100vw;
-	flex-wrap: wrap;
-	flex-direction: column;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 /* .section-wrapper {
 	width: 40%;
 } */
 section#description {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-content: center;
-	justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-line-pack: center;
+	    align-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	padding: 1em;
 }
 section#description article {
@@ -386,11 +441,12 @@ section#results {
 	color: #fefefe;
 	padding: 2em;
 }
-section#pictures h2,
-section#exams-specialities h2,
-section#results h2 {
-	font-weight: 700;
-	margin-bottom: 1.5rem;
+@media screen and (max-width: 1025px) {
+	section#pictures,
+	section#exams-specialities,
+	section#results {
+		width: 75vw;
+	}
 }
 @media screen and (max-width: 767px) {
 	section#pictures,
@@ -399,17 +455,30 @@ section#results h2 {
 		width: 100vw;
 	}
 }
+section#pictures h2,
+section#exams-specialities h2,
+section#results h2 {
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+}
 section#pictures {
 	background-color: #F5B800;
 	border: solid #F5B800 2px;
 	border-top-right-radius: 25px;
-	align-self: flex-start;
+	-ms-flex-item-align: start;
+	    align-self: flex-start;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-end;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 }
 .section-wrapper {
 	max-width: 500px;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 @media screen and (max-width: 1140px) {
 	section#pictures {
@@ -425,15 +494,21 @@ section#exams-specialities {
 	background-color: #015C8F;
 	border: solid #015C8F 2px;
 	border-bottom-left-radius: 25px;
-	align-self: flex-end;
+	-ms-flex-item-align: end;
+	    align-self: flex-end;
 }
 section#results {
 	background-color: #F58400;
 	border: solid #F58400 2px;
 	border-bottom-right-radius: 25px;
+	-ms-flex-item-align: start;
+	    align-self: flex-start;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 	margin-bottom: 2rem;
 }
 section#results form input {
@@ -458,7 +533,9 @@ section#results form input.white-full-button {
 section#results form input.white-full-button:hover {
 	background-color: #f0f0f0;
 	border-color: #f0f0f0;
-	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	        transform: scale(1.05);
+	-webkit-transition:0.25s ease-in-out;
 	transition: 0.25s ease-in-out;
 }
 button.white-section-button {
@@ -476,7 +553,9 @@ button.white-section-button {
 }
 button.white-section-button:hover {
 	background-color: #f0f0f0;
-	transform: scale(1.025);
+	-webkit-transform: scale(1.025);
+	        transform: scale(1.025);
+	-webkit-transition:0.25s ease-in-out;
 	transition: 0.25s ease-in-out;
 }
 button.white-section-button img, button.white-section-button svg {
@@ -504,10 +583,17 @@ button.white-section-button:nth-of-type(4) img {
 	}
 }
 button .section-button-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	min-width: 380px;
 }
 @media screen and (max-width: 840px) {
@@ -544,6 +630,7 @@ button .section-button-wrapper {
 }
 .footer a:hover {
 	color: #F58400;
+	-webkit-transition:ease-in-out 0.25s;
 	transition: ease-in-out 0.25s;
 }
 .footer .logo-img {
@@ -561,6 +648,7 @@ button .section-button-wrapper {
 	background-color: #fefefe;
 	/* padding-bottom: 50px; */
 	fill: #015C8F;
+	-webkit-transition:0.5s;
 	transition: 0.5s;
 }
 #Gmap {
@@ -644,6 +732,12 @@ button .section-button-wrapper {
 /*------------------------------------*\
     MISC
 \*------------------------------------*/
+
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
 
 ::selection {
 	background:#04A4CC;

@@ -121,8 +121,6 @@
 						</div>
 					</button>
 				</section>
-			<!--/Flex wrapper-->
-			</div>
 
 			<div id='results-section'></div>
 
@@ -136,13 +134,16 @@
 						<br>
 						<div class="section-wrapper">
 							<input type="submit" value="ACESSAR" class="white-full-button">
+						</div>							
+						<div class="section-wrapper">
+							<p>Estas informações estão em sua ficha de atendimento.</p>
 						</div>
 					</form>
 				</div>
-				<div class="section-wrapper">
-					<p>Estas informações estão em sua ficha de atendimento.</p>
-				</div>
 			</section>
+
+		<!--/Flex wrapper-->
+		</div>
 
 		</main>
 

@@ -31,7 +31,7 @@
 					<p class="text-xl-center text-left copyright">
 						&copy; <?php echo date('Y'); ?>,
 						todos os direitos reservados - desenvolvido por 
-						<a href="https://www.mirandacomunicacao.com.br/">Miranda Comunicação</a>
+						<a target='_blank' href="https://www.mirandacomunicacao.com.br/">Miranda Comunicação</a>
 					</p>
 				</div>
 			</footer>
