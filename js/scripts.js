@@ -1,5 +1,4 @@
 (function ($, root, undefined) {
-	// TO-DO http://iamdustan.com/smoothscroll/ Use this for smooth scrolling
 	$(function () {
 		
 		'use strict';
@@ -20,6 +19,7 @@
 		const timer = 500;
 
 		//Loading animation
+
 		// Wait for window load
 		$(window).load(function() {
 			//Animation when done loading
@@ -38,6 +38,18 @@
 				$(".se-pre-con").fadeOut("slow");
 			});
 
+			// TODO maybe just make then animate, instead of using aos
+			// This works, use this
+			setTimeout(
+				() => {
+					$('.hero-text button#button-white').animate({
+					'opacity': 1
+					}, timer);
+					$('.hero-text h2').animate({
+					'opacity': 1
+					}, timer);
+				}
+				, 2 * timer);
 		});
 
 		// Init AOS scroll
@@ -51,7 +63,10 @@
 			navLinks[i].addEventListener('click', () => {
 				switch(i) {
 					case 0:
+						console.log('reached');
 						document.querySelector('#hero').scrollIntoView({behavior: 'smooth'});
+						// TO-DO: Add menu-active class on scroll & on click
+						// $(`header .nav-item:nth-of-type(1)`).addClass('menu-active');
 						break;
 					case 1:
 						document.querySelector('#description-section').scrollIntoView({behavior: 'smooth'});
