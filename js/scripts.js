@@ -3,6 +3,19 @@
 	$(function () {
 		
 		'use strict';
+
+		//init nicescroll
+		$(function() {  
+			$("body").niceScroll({
+				cursorcolor: "#F58400",
+				cursoropacitymax: 0.75,
+				cursorwidth: "8px",
+				autohidemode: true,
+				smoothscroll: true,
+				horizrailenabled: false,
+				zindex: 99
+			});
+		});
 		//global timer for animations, change value here
 		const timer = 500;
 
@@ -17,8 +30,8 @@
 				'opacity': 0
 			}, timer);
 			$(".se-pre-con img").animate({
-				'height': '270',
-				'width': '450',
+				'height': '420',
+				'width': '420',
 				'opacity': 0
 			}, timer, () => {
 				// Animate loader off screen

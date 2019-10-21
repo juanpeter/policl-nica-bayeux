@@ -30,7 +30,14 @@ html {
 	font-size: 18px;
 	overflow-x: hidden;
 	box-sizing: border-box;
+	/* Hide Firefox scrollbar! */
+	scrollbar-width: none;
 }
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	color:#555555;
@@ -924,23 +931,4 @@ a img.aligncenter {
 	align-self: center;
 	width: 210px;
 	z-index: 3;
-	/* animation-name: preload;
-	animation-duration: 1.5s;
-	animation-iteration-count: infinite; */
 }
-/* @keyframes preload {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-@keyframes stop {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(0deg);
-	}
-} */
