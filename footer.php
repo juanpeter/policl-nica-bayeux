@@ -36,7 +36,6 @@
 				</div>
 			</footer>
 			<!-- /footer -->
-			analytics
 		<?php wp_footer(); ?>
 
 		<!-- analytics -->

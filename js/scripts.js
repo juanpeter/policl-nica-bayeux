@@ -42,12 +42,10 @@
 			// This works, use this
 			setTimeout(
 				() => {
-					$('.hero-text button#button-white').animate({
-					'opacity': 1
-					}, timer);
-					$('.hero-text h2').animate({
-					'opacity': 1
-					}, timer);
+				$('.hero-text').animate({
+					'opacity': 1,
+					'margin-bottom': 0
+					}, timer)
 				}
 				, 2 * timer);
 		});
@@ -56,6 +54,88 @@
 		AOS.init({
 			duration: 1200,
 		});
+		
+		// Get current position, add 'active' class when reached
+		const highlightScroll = () => {
+			// Reset classes
+			$('.nav-item').removeClass('menu-active');
+			$('.side-nav li').removeClass('menu-active');
+
+			// TODO This code could work better
+
+			if ($(window).height() > 920) {
+				if (window.scrollY <= 400) {
+					$('.nav-item:nth-of-type(1)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(1)').addClass('menu-active');
+				}
+				else if (window.scrollY <= 1300) {
+					$('.nav-item:nth-of-type(2)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(2)').addClass('menu-active');
+				}
+				else if (window.scrollY <= 1800) {
+					$('.nav-item:nth-of-type(3)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(3)').addClass('menu-active');
+				}
+				else if (window.scrollY <= 2400) {
+					$('.nav-item:nth-of-type(4)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(4)').addClass('menu-active');
+				}
+				else {
+					$('.nav-item:nth-of-type(5)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(5)').addClass('menu-active');
+				}
+			}
+			else if ($(window).height() <= 920) {
+				if (window.scrollY <= 400) {
+					$('.nav-item:nth-of-type(1)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(1)').addClass('menu-active');
+				}
+				else if (window.scrollY <= 1100) {
+					$('.nav-item:nth-of-type(2)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(2)').addClass('menu-active');
+				}
+				else if (window.scrollY <= 1700) {
+					$('.nav-item:nth-of-type(3)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(3)').addClass('menu-active');
+				}
+				else if (window.scrollY <= 2100) {
+					$('.nav-item:nth-of-type(4)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(4)').addClass('menu-active');
+				}
+				else {
+					$('.nav-item:nth-of-type(5)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(5)').addClass('menu-active');
+				}
+			}
+			else if ($(window).height() <= 800) {
+				if (window.scrollY <= 400) {
+					$('.nav-item:nth-of-type(1)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(1)').addClass('menu-active');
+				}
+				else if (window.scrollY <= 1300) {
+					$('.nav-item:nth-of-type(2)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(2)').addClass('menu-active');
+				}
+				else if (window.scrollY <= 1770) {
+					$('.nav-item:nth-of-type(3)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(3)').addClass('menu-active');
+				}
+				else if (window.scrollY <= 2400) {
+					$('.nav-item:nth-of-type(4)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(4)').addClass('menu-active');
+				}
+				else {
+					$('.nav-item:nth-of-type(5)').addClass('menu-active');
+					$('.side-nav li:nth-of-type(5)').addClass('menu-active');
+				}
+			}
+		}
+		// add menu active on first load
+		highlightScroll();
+		// add menu active when scrolling
+		$(window).scroll( () => {
+			highlightScroll();
+		});
 
 		// Scroll navigation
 		const navLinks = document.getElementsByClassName('nav-link');
@@ -63,10 +143,7 @@
 			navLinks[i].addEventListener('click', () => {
 				switch(i) {
 					case 0:
-						console.log('reached');
 						document.querySelector('#hero').scrollIntoView({behavior: 'smooth'});
-						// TO-DO: Add menu-active class on scroll & on click
-						// $(`header .nav-item:nth-of-type(1)`).addClass('menu-active');
 						break;
 					case 1:
 						document.querySelector('#description-section').scrollIntoView({behavior: 'smooth'});
@@ -103,8 +180,9 @@
 				};
 			});
 		};
+
 		// repeated, better refactor
-		function closeMenu() {
+		const closeMenu = () => {
 			$('li#menu-button svg').css({
 				'transform': 'rotate(0deg)',
 				'transition': (timer / 1000) + 's',

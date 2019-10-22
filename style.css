@@ -174,8 +174,8 @@ header nav {
 .navbar {
 	padding: 0 2rem;
 }
-.menu-active {
-	background-color: red;
+.navbar-brand {
+	padding: 0;
 }
 .fixed-top {
 	z-index: 3;
@@ -195,10 +195,15 @@ header nav li span {
 	font-size: 1.25rem;
 	font-weight: bold;
 }
-header nav li span{
+header nav li span {
 	color: #015C8F;
 }
-
+.menu-active {
+	background-color: #F58400;
+}
+header nav li.nav-item.menu-active span {
+	color: #fefefe;
+}
 header nav a {
 	height: 100%;
 }
@@ -289,6 +294,8 @@ header nav svg {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	z-index: 2;
+	opacity: 0;
+	margin-bottom: 3rem;
 }
 .hero h2 {
 	font-family: 'Roboto Slab', serif;
@@ -305,9 +312,6 @@ header nav svg {
 	.hero h2 {
 		font-size: 2rem;
 	}
-}
-.hero-text button#button-white {
-	opacity: 0;
 }
 aside#contact {
 	position: fixed;
