@@ -1,10 +1,19 @@
 <?php get_header(); ?>
 
+<!-- add some margin here -->
 	<main role="main">
+
 		<!-- section -->
 		<section>
 
 			<h1><?php the_title(); ?></h1>
+
+			<div class="search-bar">
+				<input type="text" name="search" value="" autocomplete="off"
+				id="searchInput" placeholder="Buscar Exame...">
+			</div>
+
+			<?php //get_sidebar(); ?>
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -13,11 +22,9 @@
 
 				<?php the_content(); ?>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
-
 				<br class="clear">
 
-				<?php edit_post_link(); ?>
+				<?php /*edit_post_link();*/ ?>
 
 			</article>
 			<!-- /article -->
@@ -40,6 +47,5 @@
 		<!-- /section -->
 	</main>
 
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
