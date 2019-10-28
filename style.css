@@ -58,10 +58,10 @@ img {
 	vertical-align:bottom;
 }
 a {
-	color:#555555;
+	color:#015C8F;
 }
 a:hover {
-	color:#555555;
+	color:#F58400;
 	text-decoration:none;
 }
 a:focus {
@@ -607,6 +607,9 @@ button .section-button-wrapper {
 	button .section-button-wrapper {
 		min-width: 280px;
 	}
+}
+button .section-button-wrapper span {
+	color: #555555;
 }
 #description-section,
 #pictures-section,

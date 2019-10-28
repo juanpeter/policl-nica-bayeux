@@ -8,7 +8,7 @@
 			$("body").niceScroll({
 				cursorcolor: "#F58400",
 				cursoropacitymax: 0.75,
-				cursorwidth: "8px",
+				cursorwidth: "12px",
 				autohidemode: true,
 				smoothscroll: true,
 				horizrailenabled: false,
@@ -38,7 +38,6 @@
 				$(".se-pre-con").fadeOut("slow");
 			});
 
-			// TODO maybe just make then animate, instead of using aos
 			// This works, use this
 			setTimeout(
 				() => {
@@ -55,6 +54,36 @@
 			duration: 1200,
 		});
 		
+		let i = 0;
+
+		// Contact pop-up
+		document.getElementById('contact-header').addEventListener('click', () => {
+			i++;
+			i % 2 == 0
+			? (
+				$('#contact').animate({ bottom: '0'}, timer),
+				$('.contact-header svg').css({
+					'transform': 'rotate(0deg)',
+					'transition': (timer / 1000) + 's',
+				}, timer)
+			)
+			: (
+				$('#contact').animate({ bottom: '145px'}, timer),
+				$('.contact-header svg').css({
+					'transform': 'rotate(180deg)',
+					'transition': (timer / 1000) + 's',
+				}, timer)
+			)
+		});
+		
+		// footer to top link
+		document.getElementById('footer-arrow').addEventListener('click', () => {
+			$('html, body').animate({scrollTop:0}, timer);
+        });
 	});
 
 })(jQuery, this);
+
+// Aparelho otodontico (aplicação e manutenção), procedimentos clinicos
+// clareamento, manuntenção
+// 

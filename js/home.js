@@ -3,6 +3,9 @@
 		
 		'use strict';
 
+		//global timer for animations, change value here
+		const timer = 500;
+
         // Get current position, add 'active' class when reached
 		const highlightScroll = () => {
 			// Reset classes
@@ -159,28 +162,6 @@
 			document.querySelector('#description-section').scrollIntoView({behavior: 'smooth'});
 		});
 
-		let i = 0;
-
-		// Contact pop-up
-		document.getElementById('contact-header').addEventListener('click', () => {
-			i++;
-			i % 2 == 0
-			? (
-				$('#contact').animate({ bottom: '0'}, timer),
-				$('.contact-header svg').css({
-					'transform': 'rotate(0deg)',
-					'transition': (timer / 1000) + 's',
-				}, timer)
-			)
-			: (
-				$('#contact').animate({ bottom: '145px'}, timer),
-				$('.contact-header svg').css({
-					'transform': 'rotate(180deg)',
-					'transition': (timer / 1000) + 's',
-				}, timer)
-			)
-		});
-
 		document.getElementById('menu-button').addEventListener('click', () => {
 			$('li#menu-button svg').css({
 				'transform': 'rotate(90deg)',
@@ -247,11 +228,6 @@
 			}, timer);
 			$('.fade-in').css('display','none');
 		});
-
-		// TODO change this to scrolltop 0 and include it inside scripts.js
-		document.getElementById('footer-arrow').addEventListener('click', () => {
-			document.querySelector('#hero').scrollIntoView({behavior: 'smooth'});
-        });
         
     });
 
