@@ -157,6 +157,10 @@ function html5blank_styles()
         wp_register_style('search', get_template_directory_uri() . '/search.css', array(), '1.0', 'all');
         wp_enqueue_style('search'); // Enqueue it!
     }
+    elseif ( is_page_template('template-demo.php') ) {
+        wp_register_style('demo-template', get_template_directory_uri() . '/demo-template.css', array(), '1.0', 'all');
+        wp_enqueue_style('demo-template'); // Enqueue it!
+    }
 }
 
 // Register HTML5 Blank Navigation
