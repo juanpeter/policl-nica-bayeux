@@ -12,12 +12,24 @@
 				<iframe id="Gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.022343451823!2d-34.92016814907944!3d-7.1234077718136914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace89b568817d9%3A0x1799c2be672e669f!2sAv.%20Liberdade%2C%202737%20-%20Sesi%2C%20Bayeux%20-%20PB%2C%2058306-000!5e0!3m2!1sen!2sbr!4v1570022652420!5m2!1sen!2sbr"frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 				<!-- wrapper -->
 				<div class="container-fluid">
-					<div class="row text-center">
-						<div class="col-12">
-						<!-- <hr> -->
+					<div class="row">
+						<div class="col-12 text-center">
 							<h2>Policlínica Bayeux</h2>
-							<p>Av. Liberdade, 2737 - Sesi Bayeux - PB 58306-000</p>
-							<p>Telefone: <a href="tel:+558332320636">(83) 3232-0636</a></p>
+							<hr>
+							<div class="row text-md-left text-center">
+								<div class="col-md-6">
+									<h3>Unidade Sesi</h3>
+									<p>Av. Liberdade, 2737 - Sesi Bayeux - PB 58306-000</p>
+									<p>Telefone: <a href="tel:+558332320636">(83) 3232-0636</a></p>
+								</div>
+								<div class="col-md-6">
+									<hr class="d-md-none d-block">
+									<h3>Unidade Centro</h3>
+									<p>Av. Liberdade, 3655 - Sesi Bayeux - PB 58306-000</p>
+									<p>Telefone: <a href="tel:+558332320636">(83) 3232-0636</a></p>
+								</div>
+							</div>
+							
 							<svg id='footer-arrow' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  x="0px" y="0px" viewBox="0 0 451.847 451.846" style="enable-background:new 0 0 451.847 451.846;" xml:space="preserve"><g>
 									<path id='arrow' d="M248.292,106.406l194.281,194.29c12.365,12.359,12.365,32.391,0,44.744c-12.354,12.354-32.391,12.354-44.744,0
 									L225.923,173.529L54.018,345.44c-12.36,12.354-32.395,12.354-44.748,0c-12.359-12.354-12.359-32.391,0-44.75L203.554,106.4

@@ -134,7 +134,7 @@ function html5blank_conditional_scripts()
             wp_register_script('homeJs', get_template_directory_uri() . '/js/home.js', array('jquery'), '1.0.0'); // Home script
             wp_enqueue_script('homeJs'); // Enqueue it!
     }
-    elseif ( is_page_template('search-page.php') ) {
+    elseif ( is_page_template('search-template.php') ) {
         wp_register_script('searchJs', get_template_directory_uri() . '/js/search.js', array('jquery'), '1.0.0'); // search.js script
         wp_enqueue_script('searchJs'); // Enqueue it!
     }
@@ -153,13 +153,13 @@ function html5blank_styles()
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
 
-    if ( is_page_template('search-page.php') ) {
-        wp_register_style('search', get_template_directory_uri() . '/search.css', array(), '1.0', 'all');
+    if ( is_page_template('search-template.php') ) {
+        wp_register_style('search', get_template_directory_uri() . '/search-template.css', array(), '1.0', 'all');
         wp_enqueue_style('search'); // Enqueue it!
     }
-    elseif ( is_page_template('template-demo.php') ) {
-        wp_register_style('demo-template', get_template_directory_uri() . '/demo-template.css', array(), '1.0', 'all');
-        wp_enqueue_style('demo-template'); // Enqueue it!
+    elseif ( is_page_template('default-template.php') ) {
+        wp_register_style('default-template', get_template_directory_uri() . '/default-template.css', array(), '1.0', 'all');
+        wp_enqueue_style('default-template'); // Enqueue it!
     }
 }
 

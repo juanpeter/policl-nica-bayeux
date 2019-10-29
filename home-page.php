@@ -86,14 +86,16 @@
 					<p>Conheça todas as maneiras que podemos cuidar de sua saúde!</p>
 				</div>
 				<button class="white-section-button">
-					<div class="section-button-wrapper">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/icons/doctor.svg" alt="Especialidades Médicas">
-						<span>Especialidades Médicas</span>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/icons/right-arrow.svg" alt="Acessar">
-					</div>
+					<a href="<?php echo get_template_directory_uri(); ?>/especialidades-medicas">
+						<div class="section-button-wrapper">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/icons/doctor.svg" alt="Especialidades Médicas">
+							<span>Especialidades Médicas</span>
+							<img src="<?php echo get_template_directory_uri(); ?>/img/icons/right-arrow.svg" alt="Acessar">
+						</div>
+					</a>
 				</button>
 				<button class="white-section-button">
-					<a href="<?php  echo get_template_directory_uri(); ?>/exames-laboratoriais">
+					<a href="<?php echo get_template_directory_uri(); ?>/exames-laboratoriais">
 						<div class="section-button-wrapper">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/icons/microscope.svg" alt="Exames laboratoriais">
 							<span>Exames Laboratoriais</span>
@@ -102,14 +104,16 @@
 					</a>
 				</button>
 				<button class="white-section-button">
-					<div class="section-button-wrapper">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/icons/stethoscope.svg" alt="Exames clínicos">
-						<span>Exames Clínicos</span>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/icons/right-arrow.svg" alt="Acessar">
-					</div>
+					<a href="<?php echo get_template_directory_uri(); ?>/exames-clinicos">
+						<div class="section-button-wrapper">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/icons/stethoscope.svg" alt="Exames clínicos">
+							<span>Exames Clínicos</span>
+							<img src="<?php echo get_template_directory_uri(); ?>/img/icons/right-arrow.svg" alt="Acessar">
+						</div>
+					</a>
 				</button>
 				<button class="white-section-button">
-					<a href="<?php  echo get_template_directory_uri(); ?>/odontologia">
+					<a href="<?php echo get_template_directory_uri(); ?>/odontologia">
 						<div class="section-button-wrapper">
 						<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0)">

@@ -20,7 +20,6 @@
 *:before {
 	box-sizing:border-box;
 	-webkit-font-smoothing:antialiased;
-	font-smoothing:antialiased;
 	text-rendering:optimizeLegibility;
 }
 html {
@@ -63,6 +62,8 @@ a {
 a:hover {
 	color:#F58400;
 	text-decoration:none;
+	-webkit-transition:ease-in-out 0.25s;
+	transition: ease-in-out 0.25s;
 }
 a:focus {
 	outline:0;
@@ -74,6 +75,10 @@ a:active {
 input:focus {
 	outline:0;
 	border:1px solid #04A4CC;
+}
+hr {
+	border-color: #fefefe;
+	border-width: 3px;
 }
 /*------------------------------------*\
     STRUCTURE
@@ -262,10 +267,6 @@ header nav svg {
 		-webkit-transition:ease-in-out 0.25s;
 		transition: ease-in-out 0.25s;
 	}
-}
-/* sidebar */
-.sidebar {
-
 }
 /* hero */
 .hero {
@@ -835,12 +836,12 @@ a img.aligncenter {
 	margin:0;
 	padding:0 4px 5px;
 }
-.sticky {
+/* .sticky {
 
 }
 .bypostauthor {
 
-}
+} */
 
 /*------------------------------------*\
     PRINT
