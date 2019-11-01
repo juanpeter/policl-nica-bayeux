@@ -20,13 +20,13 @@
 								<div class="col-md-6">
 									<h3>Unidade Sesi</h3>
 									<p>Av. Liberdade, 2737 - Sesi Bayeux - PB 58306-000</p>
-									<p>Telefone: <a href="tel:+558332320636">(83) 3232-0636</a></p>
+									<p>Telefone: <a href="tel:+558332320636" rel="noopener">(83) 3232-0636</a></p>
 								</div>
 								<div class="col-md-6">
 									<hr class="d-md-none d-block">
 									<h3>Unidade Centro</h3>
 									<p>Av. Liberdade, 3655 - Sesi Bayeux - PB 58306-000</p>
-									<p>Telefone: <a href="tel:+558332320636">(83) 3232-0636</a></p>
+									<p>Telefone: <a href="tel:+558332320636" rel="noopener">(83) 3232-0636</a></p>
 								</div>
 							</div>
 							

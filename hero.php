@@ -1,7 +1,6 @@
-<div class="hero" id='hero'>
-    <div class="hero-text">
-        <h2>Cuidamos da sua saúde para você cuidar daqueles que ama</h2>
-        <button id="button-white">CONHEÇA</button>
+<?php if ( get_header_image() ) : ?>
+    <div id="hero" class="hero">
+        <img class='img-fluid' src="<?php header_image(); ?>"  alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+        <button data-aos="fade-down" id="button-white">CONHEÇA-NOS</button>
     </div>
-    <div id="hero-background"></div>
-</div>
+<?php endif; ?>

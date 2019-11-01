@@ -228,7 +228,7 @@
 			}, timer);
 			$('.fade-in').css('display','none');
 		});
-        
+		
     });
 
 })(jQuery, this);

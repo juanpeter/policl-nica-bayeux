@@ -26,21 +26,21 @@ if (function_exists('add_theme_support'))
     add_theme_support('menus');
 
     // Add custom header background
-    add_theme_support( 'custom-background', array(
-        'wp-head-callback' => 'wpse_189361_custom_background_cb',
-        'default-color'    => '015C8F',
-        'default-image'    => get_template_directory_uri() . '/img/bg.jpg',
-    ));
-    function wpse_189361_custom_background_cb() {
-        ob_start();
+    // add_theme_support( 'custom-background', array(
+    //     'wp-head-callback' => 'wpse_189361_custom_background_cb',
+    //     'default-color'    => '015C8F',
+    //     'default-image'    => get_template_directory_uri() . '/img/bg.jpg',
+    // ));
+    // function wpse_189361_custom_background_cb() {
+    //     ob_start();
     
-        _custom_background_cb(); // Default handler
+    //     _custom_background_cb(); // Default handler
     
-        $style = ob_get_clean();
-        $style = str_replace( 'body.custom-background', '.hero', $style );
+    //     $style = ob_get_clean();
+    //     $style = str_replace( 'body.custom-background', '.hero', $style );
     
-        echo $style;
-    }
+    //     echo $style;
+    // }
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
@@ -56,17 +56,19 @@ if (function_exists('add_theme_support'))
     ));*/
 
     // Add Support for Custom Header - Uncomment below if you're going to use
-    /*add_theme_support('custom-header', array(
-	'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
-	'header-text'			=> false,
-	'default-text-color'		=> '000',
-	'width'				=> 1000,
-	'height'			=> 198,
-	'random-default'		=> false,
-	'wp-head-callback'		=> $wphead_cb,
+    add_theme_support('custom-header', array(
+	'default-image'			    => get_template_directory_uri() . '/img/bg.jpg',
+	'header-text'			    => true, //Made this true, wonder what happens?
+    'default-text-color'	    => '#fefefe',
+    // 'flex-width'                => true,
+    // 'width'				        => 2000,
+    // 'flex-height'               => true,
+	// 'height'			        => 900,
+	'random-default'		    => false,
+	'wp-head-callback'		    => $wphead_cb,
 	'admin-head-callback'		=> $adminhead_cb,
 	'admin-preview-callback'	=> $adminpreview_cb
-    ));*/
+    ));
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');

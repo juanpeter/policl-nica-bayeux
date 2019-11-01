@@ -83,7 +83,3 @@
 	});
 
 })(jQuery, this);
-
-// Aparelho otodontico (aplicação e manutenção), procedimentos clinicos
-// clareamento, manuntenção
-// 

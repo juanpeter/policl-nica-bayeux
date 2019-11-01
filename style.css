@@ -280,11 +280,15 @@ header nav svg {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	height: 98vh;
 	color: #fefefe;
 	border-bottom: #F5B800 solid 18px;
 }
-.hero .hero-text {
+.hero img {
+	padding-top: 50px;
+	max-height: 98vh;
+	filter: brightness(0.7);
+}
+/* .hero .hero-text {
 	width: 600px;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -297,8 +301,32 @@ header nav svg {
 	z-index: 2;
 	opacity: 0;
 	margin-bottom: 3rem;
+}*/
+#button-white {
+	position: absolute;
+	align-self: center;
+	color: #fefefe;
+	background-color: transparent;
+	border: 3px solid #fefefe;
+	border-radius: 4px;
+	margin-top: 90px;
+	width: 300px;
+	height: 50px;
 }
-.hero h2 {
+@media screen and (max-width: 1024px) {
+	#button-white {
+		display: none;
+	}
+}
+#button-white:hover {
+	color: #015C8F;
+	background-color: #fefefe;
+	-webkit-transform: scale(1.05);
+	        transform: scale(1.05);
+	-webkit-transition:ease-in-out 0.25s;
+	transition:  ease-in-out 0.25s;
+}
+/*.hero h2 {
 	font-family: 'Roboto Slab', serif;
 	font-size: 3rem;
 	line-height: 1.5em;
@@ -313,7 +341,7 @@ header nav svg {
 	.hero h2 {
 		font-size: 2rem;
 	}
-}
+} */
 aside#contact {
 	position: fixed;
 	bottom: 0;
@@ -377,29 +405,7 @@ aside#contact .contact-body {
 	text-align: center;
 	box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25);
 }
-#hero-background {
-	background-color: rgba(0, 0, 0, 0.2);
-	height: calc(98vh - 18px);
-	width: 100vw;
-	position: absolute;
-	z-index: 1;
-}
-#button-white {
-	color: #fefefe;
-	background-color: transparent;
-	border: 3px solid #fefefe;
-	border-radius: 4px;
-	width: 300px;
-	height: 50px;
-}
-#button-white:hover {
-	color: #015C8F;
-	background-color: #fefefe;
-	-webkit-transform: scale(1.05);
-	        transform: scale(1.05);
-	-webkit-transition:ease-in-out 0.25s;
-	transition:  ease-in-out 0.25s;
-}
+
 .flex-wrapper {
 	display: -webkit-box;
 	display: -ms-flexbox;
