@@ -131,14 +131,14 @@
 			</section>
 
 		<div id='results-section'></div>
-
 		<section id="results" data-aos="fade-right">
 			<div class="section-wrapper">
 			<h2>Resultados Online</h2>
-				<form name="acessoPacientes" id="acessoPacientes" method="post" action="http://laudo.doremedicina.com.br/arlaudo/default.aspx">
-					<input name="PACIENTE" title="ID do paciente" id="PACIENTE" size="15" class="form" type="text" value="Id do Paciente" onfocus="if (this.value == 'Id do Paciente'){ this.value='';}" onblur="if (this.value == ''){ this.value='Id do Paciente';}">
+
+			<form id="frmAutenticacao" name="frmAutenticacao" onsubmit="return valida()" action="http://187.33.247.246/arlaudo/default.aspx" method="post">
+					<input name="PACIENTE" title="ID do paciente" id="PACIENTE" maxlength="20" class="form" type="text" value="Id do Paciente" onfocus="if (this.value == 'Id do Paciente'){ this.value='';}" onblur="if (this.value == ''){ this.value='Id do Paciente';}">
 					<br>
-					<input name="SENHA" title="Senha" size="15" id="SENHA" class="form" type="password" value="*******" onfocus="if (this.value == '*******'){ this.value='';}" onblur="if (this.value == ''){ this.value='*******';}">
+					<input name="SENHA" title="Senha" size="15" id="senha" class="form" type="password" value="*******" maxlength="8" onfocus="if (this.value == '*******'){ this.value='';}" onblur="if (this.value == ''){ this.value='*******';}">
 					<br>
 					<div class="section-wrapper">
 						<input type="submit" value="ACESSAR" class="white-full-button">
@@ -146,6 +146,7 @@
 					<div class="section-wrapper">
 						<p>Estas informações estão em sua ficha de atendimento.</p>
 					</div>
+					<a href="http://187.33.247.246/arweb/login.aspx" target="_blank">Acesso aos médicos</a>
 				</form>
 			</div>
 		</section>
