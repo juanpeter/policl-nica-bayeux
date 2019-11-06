@@ -47,11 +47,11 @@
 					}, timer)
 				}
 				, 2 * timer);
-		});
 
-		// Init AOS scroll
-		AOS.init({
-			duration: 1200,
+				// Init AOS scroll
+				AOS.init({
+					duration: 1200,
+				});
 		});
 		
 		let i = 0;

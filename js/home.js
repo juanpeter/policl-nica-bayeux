@@ -58,7 +58,7 @@
 					$('.side-nav li:nth-of-type(5)').addClass('menu-active');
 				}
 			}
-			else if ($(window).height() <= 800) {
+			else if ($(window).height() <= 920) {
 				if (window.scrollY <= 400) {
 					$('.nav-item:nth-of-type(1)').addClass('menu-active');
 					$('.side-nav li:nth-of-type(1)').addClass('menu-active');

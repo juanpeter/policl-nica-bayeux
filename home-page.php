@@ -146,7 +146,9 @@
 					<div class="section-wrapper">
 						<p>Estas informações estão em sua ficha de atendimento.</p>
 					</div>
-					<a href="http://187.33.247.246/arweb/login.aspx" target="_blank">Acesso aos médicos</a>
+					<a href="http://187.33.247.246/arweb/login.aspx" target="_blank">
+						<button class="white-full-button">Acesso aos médicos</button>
+					</a>
 				</form>
 			</div>
 		</section>
