@@ -1,4 +1,4 @@
-<?php /* Template Name: Search Page Template */ ?>
+<?php /* Template Name: Specialties Page Template */ ?>
 <?php include('templates/header-other.php'); ?>
 
 <main>
@@ -35,56 +35,47 @@
 				</a>
 			</form>
 		</div>
-	</aside>
-	<h1><?php the_title(); ?></h1>
-	<?php 
-		// connect to database
-		$conn = mysqli_connect('localhost', 'john', 'test1234', 'test');
-		mysqli_set_charset($conn,'utf8');
-		$character = '';
+    </aside>
 
-		if(isset($_GET['character'])) {
-			$character = $_GET['character'];
-			$character = preg_replace('#[^a-z]#i', '', $character);
-			$query = "SELECT * FROM EXAME WHERE TITULO LIKE '$character%'";
-		} else {
-			$query = "SELECT * FROM EXAME ORDER BY TITULO";
-		}
-		$result = mysqli_query($conn, $query);
-		$exams = mysqli_fetch_all($result, MYSQLI_ASSOC);
-		mysqli_free_result($result);
+    <div class="container exam-content">
+        <div class="row">
+            <div class="col-12">
+                <h1>Nossas especialidades</h1>
+            </div>
+        <?php 
+                // connect to database
+                $conn = mysqli_connect('localhost', 'john', 'test1234', 'test');
+                mysqli_set_charset($conn,'utf8');
 
-	?>
-	<div class="container">
-		<nav class="Page navigation">
-			<ul class="pagination justify-content-center">
-			<?php
-				$character = range('A','Z');
-				foreach($character as $alphabet) {
-					echo '<li class="page-item">
-						<a class="page-link"
-						href="'.$pagename.'?character='.$alphabet.'">'.$alphabet.'
-						</a>
-					</li>';
-				}
-				echo '</ul>';
-			?>
-		</nav>
-		<table class="table table-bordered table-responsive">
-			<tr>
-				<th>Exame</th>
-				<th>Procedimento</th>
-			</tr>
-			<?php foreach($exams as $exam) { ?>
-			<tr>
-				<td><?php echo $exam['TITULO']; ?></td>
-				<td><?php echo $exam['DESCRICAO']; ?></td>
-			</tr>
-			<?php
-				}
-			?>
-		</table>
-	</div>
+                // check connection
+                if (!$conn) {
+                    echo 'Connection error' . mysqli_connect_error();
+                }
+
+                // write query for exams
+                $sql = 'SELECT Especialidade, imageUrl FROM especialidadesmedicas';
+
+                $imgUrl = get_template_directory_uri() . '/img/icons/specialities/';
+                // make query and get results
+                $result = mysqli_query($conn, $sql);
+
+                // fetch resulting rows as an array
+                $specialities = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+                // Free results from memory
+                mysqli_free_result($result);
+
+            ?>
+            <?php foreach($specialities as $speciality) { ?>
+                <div class="col-6 col-md-4 col-lg-3 mb-3">
+                    <div class="card p-3">
+                        <img class="card-img-top" src="<?php echo $imgUrl . $speciality['imageUrl']; ?>">
+                        <div class="card-body text-center">
+                        <h5 class="card-title"><?php echo $speciality['Especialidade']; ?></h5>								</div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
 </main>
-
 <?php include('templates/footer.php'); ?>

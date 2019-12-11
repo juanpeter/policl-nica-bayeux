@@ -132,15 +132,10 @@ function html5blank_header_scripts()
 // Load HTML5 Blank conditional scripts
 function html5blank_conditional_scripts()
 {
-    if (is_page_template('home-page.php')) {
+    if (is_page_template('index.php')) {
             wp_register_script('homeJs', get_template_directory_uri() . '/js/home.js', array('jquery'), '1.0.0'); // Home script
             wp_enqueue_script('homeJs'); // Enqueue it!
     }
-    elseif ( is_page_template('search-template.php') ) {
-        wp_register_script('searchJs', get_template_directory_uri() . '/js/search.js', array('jquery'), '1.0.0'); // search.js script
-        wp_enqueue_script('searchJs'); // Enqueue it!
-    }
-
 }
 
 // Load HTML5 Blank styles
@@ -148,19 +143,15 @@ function html5blank_styles()
 {
     wp_enqueue_style('Boostrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
 
-    wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
+    wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.min.css', array(), '1.0', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
 
 
-    wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_register_style('html5blank', get_template_directory_uri() . '/css/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
 
-    if ( is_page_template('search-template.php') ) {
-        wp_register_style('search', get_template_directory_uri() . '/search-template.css', array(), '1.0', 'all');
-        wp_enqueue_style('search'); // Enqueue it!
-    }
-    elseif ( is_page_template('default-template.php') ) {
-        wp_register_style('default-template', get_template_directory_uri() . '/default-template.css', array(), '1.0', 'all');
+    if ( is_page_template('default-template.php') ) {
+        wp_register_style('default-template', get_template_directory_uri() . '/css/default-template.css', array(), '1.0', 'all');
         wp_enqueue_style('default-template'); // Enqueue it!
     }
 }

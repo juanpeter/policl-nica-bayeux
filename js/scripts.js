@@ -3,6 +3,8 @@
 		
 		'use strict';
 
+		let i = 0;
+
 		//init nicescroll
 		$(function() {  
 			$("body").niceScroll({
@@ -30,7 +32,7 @@
 				'opacity': 0
 			}, timer);
 			$(".se-pre-con img").animate({
-				'height': '420',
+				'height': '244',
 				'width': '420',
 				'opacity': 0
 			}, timer, () => {
@@ -54,32 +56,26 @@
 				});
 		});
 		
-		let i = 0;
-
-		// Contact pop-up
-		document.getElementById('contact-header').addEventListener('click', () => {
-			i++;
-			i % 2 == 0
-			? (
-				$('#contact').animate({ bottom: '0'}, timer),
-				$('.contact-header svg').css({
-					'transform': 'rotate(0deg)',
-					'transition': (timer / 1000) + 's',
-				}, timer)
-			)
-			: (
-				$('#contact').animate({ bottom: '145px'}, timer),
-				$('.contact-header svg').css({
-					'transform': 'rotate(180deg)',
-					'transition': (timer / 1000) + 's',
-				}, timer)
-			)
-		});
-		
 		// footer to top link
 		document.getElementById('footer-arrow').addEventListener('click', () => {
 			$('html, body').animate({scrollTop:0}, timer);
-        });
+		});
+		// Results, add on every menu
+		document.getElementById('results-header').addEventListener('click', () => {
+			i++;
+			if (i%2 !== 0) {
+				$('#results').animate({
+					bottom: 0
+				}, 250, 'linear');
+			} else {
+				$('#results').animate({
+					bottom: '-310px'
+				}, 250, 'linear');
+				$('#results-header svg').animate ({
+					transform: 'rotate(0deg)'
+				}, 250, 'linear');
+			}
+		});
 	});
 
 })(jQuery, this);

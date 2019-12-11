@@ -32,20 +32,15 @@
 <body <?php body_class(); ?>>
     <div class="se-pre-con">
         <div class="loader"></div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/policlinicaBayeux.png" alt="Logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/policlinicaBayeux-alt.png" alt="Logo">
     </div>
 
         <div class="fade-in"></div>
         <!-- header -->
         <header class="header clear" role="banner">
 
-        <nav class="navbar fixed-top">
-            <a href="<?php echo home_url(); ?>"> Voltar a página principal</a> 
-        <!-- logo -->
-            <a class='navbar-brand logo' href="<?php echo home_url(); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/policlinicaBayeux.png" alt="Logo" class="logo-img">
-            </a>
-        <!-- /logo -->
+        <nav class="navbar">
+            <a class='navbar-brand' href="<?php echo home_url(); ?>">Voltar a página principal</a> 
         </nav>
             <!-- /nav -->
 

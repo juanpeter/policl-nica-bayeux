@@ -1,4 +1,4 @@
-<?php include 'header-other.php'; ?>
+<?php include('templates/header-other.php'); ?>
 
 	<main role="main">
 		<!-- section -->
@@ -25,4 +25,4 @@
 	</main>
 
 
-<?php get_footer(); ?>
+<?php include('templates/footer.php'); ?>

@@ -10,7 +10,7 @@
                 <li><span class='nav-link'>Quem Somos</span></li>
                 <li><span class='nav-link'>Estrutura</span></li>
                 <li><span class='nav-link'>Exames</span></li>
-                <li><span class='nav-link'>Resultados</span></li>
+                <li><span class='nav-link'>Contato</span></li>
             </ul>
         </nav>
 </aside>
