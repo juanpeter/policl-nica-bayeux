@@ -57,7 +57,7 @@
 	?>
 	<div class="container">
 		<nav class="Page navigation">
-			<ul class="pagination justify-content-center">
+			<ul class="pagination justify-content-center flex-wrap">
 			<?php
 				$character = range('A','Z');
 				foreach($character as $alphabet) {

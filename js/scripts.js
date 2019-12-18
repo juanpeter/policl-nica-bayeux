@@ -60,22 +60,6 @@
 		document.getElementById('footer-arrow').addEventListener('click', () => {
 			$('html, body').animate({scrollTop:0}, timer);
 		});
-		// Results, add on every menu
-		document.getElementById('results-header').addEventListener('click', () => {
-			i++;
-			if (i%2 !== 0) {
-				$('#results').animate({
-					bottom: 0
-				}, 250, 'linear');
-			} else {
-				$('#results').animate({
-					bottom: '-310px'
-				}, 250, 'linear');
-				$('#results-header svg').animate ({
-					transform: 'rotate(0deg)'
-				}, 250, 'linear');
-			}
-		});
 	});
 
 })(jQuery, this);

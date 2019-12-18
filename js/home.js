@@ -49,9 +49,6 @@
 				};
 			});
 		};
-		document.getElementById('button-white').addEventListener('click', () => {
-			document.querySelector('#description-section').scrollIntoView({behavior: 'smooth'});
-		});
 		
 		const closeMenu = () => {
 			$('aside#menu-button svg').css({
@@ -97,10 +94,31 @@
 		// If window size is reajusted, hide the side-menu
 		window.addEventListener('resize', () => {
 			closeMenu();
+			resultMenu();
 		});
 
 		document.getElementById('close-menu').addEventListener('click', () => {
 			closeMenu();
+		});
+		let i = 0;
+		document.getElementById('results-button').addEventListener('click', () => {
+			i++;
+			if (i % 2 !== 0) {
+				$('.results-menu').animate({
+					bottom: 0
+				}, 500);
+				$('aside#contact, aside#results-button').animate({
+					bottom: '+=320'
+				}, 500);
+			} 
+			else {
+				$('.results-menu').animate({
+					bottom: '-500'
+				}, 500);
+				$('aside#contact, aside#results-button').animate({
+					bottom: '-=320'
+				}, 500);
+			}
 		});
     });
 

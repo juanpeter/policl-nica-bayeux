@@ -30,7 +30,6 @@ html {
 	        box-sizing: border-box;
 	/* Hide Firefox scrollbar */
 	scrollbar-width: none;
-	background-color: #f8f9fa;
 }
 /* Hide Chrome scrollbar */
 ::-webkit-scrollbar {
@@ -42,6 +41,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	color:#555555;
 	position: relative;
+	background-color: rgb(241, 241, 241);
 }
 ::-moz-selection {
 	background-color: transparent;
@@ -90,6 +90,15 @@ input:focus {
 hr {
 	border-color: #fefefe;
 	border-width: 3px;
+}
+.btn-orange {
+	background-color: #F58400;
+	color: #fff;
+	border-color: rgb(212, 114, 2);
+}
+.btn-orange:hover {
+	color: #fff;
+	background-color: rgb(212, 114, 2);
 }
 /*------------------------------------*\
     STRUCTURE
@@ -244,7 +253,7 @@ aside#menu-button {
 	z-index: 4;
 	position: fixed;
 	top: 2px;
-	right: 5vw;
+	right: 2.5vw;
 	fill: #ffffff;
 	align-items: center;
 	justify-content: center;
@@ -275,8 +284,8 @@ aside#contact {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	bottom: 8px;
-	right: 5vw;
+	bottom: 140px;
+	right: 2vw;
 	z-index: 4;
 	height: 80px;
 	width: 80px;
@@ -301,6 +310,7 @@ aside#contact svg {
 }
 @media screen and (max-width: 620px) {
 	aside#contact {
+		bottom: 80px;
 		height: 56px;
 		width: 56px;
 	}
@@ -309,86 +319,72 @@ aside#contact svg {
 		padding: 0;
 	}
 }
-aside#results {
+aside#results-button {
+	display: none;
+	cursor: pointer;
 	position: fixed;
-	bottom: -310px;
-	width: 280px;
-	height: 360px;
-	left: 0;
+	align-items: center;
+	justify-content: center;
+	bottom: 20px;
+	right: 2vw;
 	z-index: 4;
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	background-color: #F58400;
 	-webkit-box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
 	box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
 }
-aside#results #results-header {
-	height: 60px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+aside#results-button svg {
+	width: 56px;
+	height: 56px;
 	padding: 8px;
-	background-color: #F58400;
-	color: #fefefe;
-	border-top-right-radius: 10px;
-	font-size: 1.25rem;
-}
-@media screen and (max-width: 530px) {
-	aside#results {
-		width: 200px;
-	}
-	aside#results #results-header {
-		padding: 4px;
-		font-size: 1rem;
-	}
-}
-aside#results #results-header:hover {
-	cursor: pointer;
-	background-color: rgb(235, 126, 1);
-	transition: ease-in-out 0.25s;
-}
-aside#results #results-header svg {
-	float: right;
-	fill: #fefefe;
-	height: 30px;
-}
-aside#results #results-header:hover svg {
-	transform: rotate(180deg);
-	transition: ease-in-out 0.25s;
-}
-aside#results #results-body {
-	background-color: #F58400;
-	height: 300px;
-	padding: 8px;
-	color: #fefefe;
-}
-aside#results #results-body  form input {
-	background-color: transparent;
-	width: 100%;
-	border: none;
-	border-bottom: 2px solid #fefefe;
-	color: #fefefe;
-	margin-bottom: 8px;
-}
-aside#results #results-body form .white-full-button {
-	border: 2px solid #fefefe;
 	border-radius: 5px;
-	background-color: #fefefe;
-	color: #F58400;
-	font-weight: 700;
-	width: 120px;
-	-ms-grid-column-align: right;
-	    justify-self: right;
-	padding: 8px;
-	-webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	fill: #fefefe;
 }
-aside#results #results-body form .white-full-button:hover {
-	background-color: #f0f0f0;
-	border-color: #f0f0f0;
-	-webkit-transform: scale(1.05);
-	        -ms-transform: scale(1.05);
-	    transform: scale(1.05);
-	-webkit-transition:0.25s ease-in-out;
-	-o-transition: 0.25s ease-in-out;
-	transition: 0.25s ease-in-out;
+aside#results-button:hover {
+	background-color: rgb(212, 114, 2);
+	transform: scale(1.1);
+	-webkit-transition:0.25s;
+	-o-transition: ease-in-out 0.25s;
+	transition: ease-in-out 0.25s;
+}
+@media screen and (max-width: 620px) {
+	aside#results-button {
+		display: flex;
+		height: 56px;
+		width: 56px;
+	}
+	aside#results-button svg {
+		height: 32px;
+		padding: 0;
+	}
+}
+aside.results-menu {
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	z-index: 4;
+}
+aside .results {
+	background-color: #F58400;
+	color: #fff;
+}
+aside .results h3 {
+	font-weight: 700;
+}
+@media screen and (min-width: 621px) {
+	aside.results-menu {
+		bottom: 0;
+	}
+	aside#contact {
+		bottom: 140px;
+	}
+}
+@media screen and (max-width: 620px) {
+	aside.results-menu {
+		bottom: -500px;
+	}
 }
 /* hero */
 .hero {
@@ -475,19 +471,8 @@ section.description article {
 .slogan {
 	color: #015C8F;
 	text-align: center;
-}
-#pictures-section section,
-section#exams-specialities {
--webkit-box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
-	box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
-	color: #fefefe;
-	padding: 2em;
-}
-@media screen and (max-width: 400px) {
-	#pictures-section section,
-	section#exams-specialities {
-		width: 100vw;
-	}
+	font-weight: bold;
+	margin-bottom: 1rem;
 }
 #pictures-section section h2,
 section#exams-specialities h2 {
@@ -506,7 +491,7 @@ section#exams-specialities h2 {
 	}
 }
 /* NOSSA ESTRUTURA */
-#pictures-section section {
+/* #pictures-section section {
 	background-color: #F5B800;
 	border: solid #F5B800 2px;
 	border-top-right-radius: 25px;
@@ -516,18 +501,10 @@ section#exams-specialities h2 {
 	display: -ms-flexbox;
 	display: flex;
 	justify-content: center;
-}
-#pictures-section div:nth-of-type(2) section {
+} */
+/* #pictures-section div:nth-of-type(2) section {
 	border-top-left-radius: 25px;
 	border-top-right-radius: unset;
-}
-@media screen and (min-width: 991px) {
-	#pictures-section div:nth-of-type(1) {
-		padding-left: 0;
-	}
-	#pictures-section > div:nth-of-type(2) {
-		padding-right: 0;
-	}
 }
 @media screen and (max-width: 991px) {
 	#pictures-section div {
@@ -537,7 +514,7 @@ section#exams-specialities h2 {
 		border-top-left-radius: unset;
 		border-bottom-right-radius: 25px;
 	}
-}
+} */
 /* ESPECIALIDADES E EXAMES */
 section#exams-specialities {
 	background-color: #015C8F;
@@ -547,6 +524,7 @@ section#exams-specialities {
 }
 #exams-specialities-section .card {
 	background-color: #f8f9fa;
+	border: solid 3px #015C8F;
 	height: 100%;
 }
 #exams-specialities-section .card h5{
@@ -559,7 +537,8 @@ section#exams-specialities {
 #exams-specialities-section .card:hover {
 	transform: scale(1.05);
 	background-color: rgb(247, 149, 38);
-	color: #FFF;
+	color: #ffffff;
+	border-color: #ffffff;
 	transition: 0.25s ease-in-out;
 }
 #exams-specialities-section .card:hover svg{
@@ -567,7 +546,10 @@ section#exams-specialities {
 	transition: 0.25s ease-in-out;
 }
 #feed-section {
-	background-color: #eee;
+	background-color: rgb(64, 145, 192);
+}
+#feed-section .slogan {
+	color: #ffffff;
 }
 /* footer */
 .footer {
@@ -616,6 +598,7 @@ section#exams-specialities {
 .footer #footer-footer {
 	background-color: #024165;
 	padding: 0.5rem;
+	margin-bottom: 90px;
 }
 @media screen and (max-width: 530px) {
 	.footer #footer-footer {
@@ -632,7 +615,6 @@ footer svg {
 	padding: 8px;
 	border-radius: 5px;
 }
-
 footer svg {
 	fill: #F58400;
 }
@@ -645,14 +627,9 @@ footer a:hover svg{
     SLIDER
 \*------------------------------------*/
 .white {
-	-webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-	        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-}
-#slider_pictures p {
-	color: #000;
-	font-weight: 700;
-	position: absolute;
-	top: 75%;
+	margin: 0 auto;
+	width: 95%;
+	min-width: 300px;
 }
 /*------------------------------------*\
     PAGES

@@ -10,7 +10,6 @@
                 $content = str_replace(']]>', ']]&gt;', $content);
             ?>
             <?php echo $content; ?>
-            <button id="button-white">CONHEÇA-NOS</button>
         </div>
     </div>
 <?php endif; ?>
